@@ -389,7 +389,7 @@ def plot_linearity(
             )
             fig.update_xaxes(showline=True, linewidth=2, linecolor='black', title_standoff=5)
             fig.update_yaxes(showline=True, linewidth=2, linecolor='black', title_standoff=5)
-            fig.show(config={'displayModeBar': False})
+            fig.show(renderer='png', config={'displayModeBar': False})
 
     
 def plot_pacf(
@@ -468,4 +468,4 @@ def plot_pacf(
         fig.write_image(f'''{title.replace(' ', '_')}.png''')
 
     # Eventually show the plot
-    fig.show()
+    fig.show(renderer='png')
